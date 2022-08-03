@@ -11,6 +11,9 @@ const { connectDB } = require("./src/db");
 app.set("view engine", "ejs");
 app.set("views", "./src/templates/views/");
 
+
+app.use(express.static("./src/static/"))
+
 initializeRoutes(app)
 
 connectDB();
